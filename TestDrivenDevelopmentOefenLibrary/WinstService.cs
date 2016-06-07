@@ -20,7 +20,7 @@ namespace TestDrivenDevelopmentOefenLibrary
         {
             get
             {
-                throw new NotImplementedException();
+                return opbrengstDAO.TotaleOpbrengst() - kostDAO.TotaleKost();
             }
         }
     }
