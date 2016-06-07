@@ -8,14 +8,18 @@ namespace TestDrivenDevelopmentOefenLibrary
 {
     public class Veiling
     {
+        private decimal hoogsteBod;
         public void DoeBod(decimal bedrag)
         {
-            throw new NotImplementedException();
+            if (bedrag < 0)
+            throw new ArgumentException();
+            if (bedrag > hoogsteBod)
+                hoogsteBod = bedrag;
         }
 
         public decimal HoogsteBod()
         {
-            throw new NotImplementedException();
+            return hoogsteBod;
         }
     }
 }
